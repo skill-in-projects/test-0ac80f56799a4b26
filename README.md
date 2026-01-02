@@ -1,2 +1,5 @@
-# test-0ac80f56799a4b26
-Test backend deployment repository
+# Test Backend Deployment
+
+## Recommended Tools
+
+**Recommended SQL Editor tool (Free):** [pgAdmin](https://www.pgadmin.org/download/)

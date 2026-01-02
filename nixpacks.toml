@@ -1,0 +1,19 @@
+# Nixpacks configuration for Railway - .NET/C# Backend
+# Railway will build from repo root, then cd into backend/ directory
+# Note: No detectors specified - we provide explicit phases
+
+[phases.setup]
+nixPkgs = { csharp = "8.0" }
+
+[phases.install]
+cmds = [
+  "cd backend && dotnet restore Backend.csproj"
+]
+
+[phases.build]
+cmds = [
+  "cd backend && dotnet publish Backend.csproj -c Release -o /app/publish"
+]
+
+[start]
+cmd = "dotnet /app/publish/Backend.dll"
